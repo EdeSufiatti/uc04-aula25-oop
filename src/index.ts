@@ -1,23 +1,16 @@
-import { Pessoa } from "./classes/Pessoa";
-import { Forma } from "./classes/Forma";
-import { Quadrado } from "./classes/Quadrado";
-import { Triangulo } from "./classes/Triangulo";
+import { Forma } from './classes/Forma';
 
-const pessoa = new Pessoa("Cezar", 34, "12345678901", "M");
+// Criando uma instância de Forma com um Triângulo
+const forma1 = new Forma([3, 4, 5]);
+console.log(forma1.nome);  // Saída: Triângulo
+console.log(forma1.getTipo());  // Saída: Escaleno
 
-console.log(pessoa.nome);
-console.log(pessoa.idade);
-console.log(pessoa.cpf);
-console.log(pessoa.sexo);
+// Criando uma instância de Forma com um Quadrado
+const forma2 = new Forma([5, 5, 5, 5]);
+console.log(forma2.nome);  // Saída: Quadrado/Retângulo
+console.log(forma2.getTipo());  // Saída: Forma com 4 lados
 
-pessoa.idade = 35;
-
-const forma1 = new Quadrado([1, 1, 1, 1]);
-const forma2 = new Triangulo([1, 2, 3]);
-const forma3 = new Triangulo([1, 2, 3]);
-console.log(forma3)
-console.log(forma2)
-console.log(forma1)
-
-
-
+// Criando uma instância de Forma com um Pentágono
+const forma3 = new Forma([6, 6, 6, 6, 6]);
+console.log(forma3);  // Saída: Pentágono
+console.log(forma3.getTipo());  // Saída: Forma com 5 lados
